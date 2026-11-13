@@ -1,0 +1,641 @@
+{
+  "network_excerpt": {
+    "snapshot": "kalundborg-pre-addition",
+    "nodes": [
+      {
+        "properties": {
+          "id": "ad-upgrade-handling-v1",
+          "name": "Digestion, gas upgrading and digestate handling"
+        },
+        "labels": [
+          "Entity",
+          "ProcessTemplate"
+        ],
+        "evidence_ids": [
+          "digestion-pathway"
+        ]
+      },
+      {
+        "properties": {
+          "contingent_on_supplier": true,
+          "id": "agreement-gro"
+        },
+        "labels": [
+          "Entity",
+          "Commitment"
+        ],
+        "evidence_ids": [
+          "protected",
+          "transferable"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "ad-upgrade-handling-v1",
+        "relation": "INCLUDES_STAGE",
+        "target": "digestion",
+        "evidence_ids": [
+          "digestion-pathway"
+        ]
+      },
+      {
+        "source": "ad-upgrade-handling-v1",
+        "relation": "INCLUDES_STAGE",
+        "target": "residual-handling",
+        "evidence_ids": [
+          "digestion-pathway"
+        ]
+      },
+      {
+        "source": "ad-upgrade-handling-v1",
+        "relation": "INCLUDES_STAGE",
+        "target": "upgrading",
+        "evidence_ids": [
+          "digestion-pathway"
+        ]
+      },
+      {
+        "source": "ad-upgrade-handling-v1",
+        "relation": "OUTPUT",
+        "target": "biomethane",
+        "evidence_ids": [
+          "digestion-pathway"
+        ]
+      }
+    ]
+  },
+  "candidate_excerpt": {
+    "id": "site-a-intake-1000",
+    "site": "site-a",
+    "process": "ad-upgrade-handling-v1",
+    "capacity_claim": "intake-1000",
+    "capacity": 1000.0,
+    "fixed_intake": {
+      "value": 1000.0,
+      "unit": "t",
+      "basis": "wet intake",
+      "period": "one modeled year"
+    },
+    "hypothetical_site": true,
+    "path": {
+      "id": "site-a-intake-1000",
+      "stream": "gro",
+      "supplier": "supplier-gro",
+      "process": "ad-upgrade-handling-v1",
+      "site": "site-a",
+      "grid": "grid",
+      "farm": "farm",
+      "verdicts": [
+        {
+          "rule": "rule-authorization-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "permit",
+          "unit": "category",
+          "value": "unverified",
+          "status": "unresolved",
+          "evidence": "scenario",
+          "planning_assumption": "assume-permit"
+        },
+        {
+          "rule": "rule-digestate-acceptance-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "land",
+          "unit": "category",
+          "value": "unknown",
+          "status": "unresolved",
+          "evidence": "scenario",
+          "planning_assumption": "assume-land"
+        },
+        {
+          "rule": "rule-existing-use-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "baseline-agriculture",
+          "unit": "statement",
+          "value": "Most bioresidues spread on agricultural land before local addition",
+          "status": "passed",
+          "evidence": "lca",
+          "planning_assumption": null
+        },
+        {
+          "rule": "rule-gas-spec-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "gas-quality",
+          "unit": "category",
+          "value": "unknown",
+          "status": "unresolved",
+          "evidence": "scenario",
+          "planning_assumption": "assume-quality"
+        },
+        {
+          "rule": "rule-identity-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "stream-basis",
+          "unit": "statement",
+          "value": "Novo Yeast Cream and NovoGro streams are reported at different handling stages",
+          "status": "passed",
+          "evidence": "lca",
+          "planning_assumption": null
+        },
+        {
+          "rule": "rule-methane-yield-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "gro-yield",
+          "unit": "Nm3/t VS",
+          "value": "310",
+          "status": "passed",
+          "evidence": "scenario",
+          "planning_assumption": null
+        },
+        {
+          "rule": "rule-organic-fraction-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "gro-vs",
+          "unit": "fraction",
+          "value": "0.78",
+          "status": "passed",
+          "evidence": "scenario",
+          "planning_assumption": null
+        },
+        {
+          "rule": "rule-pathway-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "digestion-pathway",
+          "unit": "statement",
+          "value": "Digestion produces biogas and digestate; upgrading separates carbon dioxide for gas use",
+          "status": "passed",
+          "evidence": "task37",
+          "planning_assumption": null
+        },
+        {
+          "rule": "rule-pretreatment-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "pretreatment-state",
+          "unit": "category",
+          "value": "unknown",
+          "status": "unresolved",
+          "evidence": "scenario",
+          "planning_assumption": "assume-pretreatment"
+        },
+        {
+          "rule": "rule-site-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "site-access",
+          "unit": "category",
+          "value": "assumed available",
+          "status": "passed",
+          "evidence": "scenario",
+          "planning_assumption": null
+        },
+        {
+          "rule": "rule-solids-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "gro-dm",
+          "unit": "fraction",
+          "value": "0.14",
+          "status": "passed",
+          "evidence": "scenario",
+          "planning_assumption": null
+        },
+        {
+          "rule": "rule-upgrading-v1",
+          "stream": "gro",
+          "process": "ad-upgrade-handling-v1",
+          "measurement": "recovery",
+          "unit": "fraction",
+          "value": "0.96",
+          "status": "passed",
+          "evidence": "scenario",
+          "planning_assumption": null
+        }
+      ],
+      "reachable": true,
+      "eligible_under_assumptions": true,
+      "operationally_verified": false
+    }
+  },
+  "evaluation_excerpt": {
+    "id": "eval-2ed60edecce01181ef4e059f",
+    "assumption_set": "transferable",
+    "ranking": [
+      {
+        "rank": 1,
+        "candidate": "site-a-intake-2000",
+        "objective": {
+          "value": 772.9057728,
+          "unit": "MWh",
+          "basis": "delivered biomethane LHV",
+          "period": "one modeled year"
+        }
+      },
+      {
+        "rank": 2,
+        "candidate": "site-a-intake-1000",
+        "objective": {
+          "value": 466.02791424,
+          "unit": "MWh",
+          "basis": "delivered biomethane LHV",
+          "period": "one modeled year"
+        }
+      },
+      {
+        "rank": 3,
+        "candidate": "site-a-intake-500",
+        "objective": {
+          "value": 233.01395711999896,
+          "unit": "MWh",
+          "basis": "delivered biomethane LHV",
+          "period": "one modeled year"
+        }
+      },
+      {
+        "rank": 4,
+        "candidate": "baseline",
+        "objective": {
+          "value": 0.0,
+          "unit": "MWh",
+          "basis": "delivered biomethane LHV",
+          "period": "one modeled year"
+        }
+      }
+    ],
+    "normal_leaders": [
+      "site-a-intake-2000"
+    ],
+    "worst_case_leaders": [
+      "site-a-intake-1000",
+      "site-a-intake-2000"
+    ],
+    "worst_supplier_removals": {
+      "baseline": [
+        "remove-supplier-gro",
+        "remove-supplier-yeast"
+      ],
+      "site-a-intake-1000": [
+        "remove-supplier-yeast"
+      ],
+      "site-a-intake-2000": [
+        "remove-supplier-yeast"
+      ],
+      "site-a-intake-500": [
+        "remove-supplier-yeast"
+      ]
+    }
+  },
+  "stress_plan_excerpt": {
+    "id": "plan-65df57387e959d4cbc0c6e08",
+    "scenario": "remove-supplier-yeast",
+    "objective": {
+      "value": 153.43892928,
+      "unit": "MWh",
+      "basis": "delivered biomethane LHV",
+      "period": "one modeled year"
+    },
+    "unallocated": {
+      "value": 0.0,
+      "unit": "t",
+      "basis": "wet",
+      "period": "one modeled year"
+    },
+    "unmet_demand": {
+      "value": 746.56107072,
+      "unit": "MWh",
+      "basis": "soft biomethane energy requirement LHV",
+      "period": "one modeled year"
+    },
+    "vs_normal": {
+      "mwh": -79.57502783999897,
+      "percent": -34.150326797385326,
+      "changed_exchanges": [
+        {
+          "value": 500.00000000000017,
+          "unit": "t",
+          "basis": "wet residue to agriculture",
+          "period": "one modeled year",
+          "exchange": "gro/direct",
+          "delta": -499.99999999999983
+        },
+        {
+          "value": 500.0,
+          "unit": "t",
+          "basis": "wet processor intake",
+          "period": "one modeled year",
+          "exchange": "gro/feed",
+          "delta": 500.0
+        },
+        {
+          "value": 70.0,
+          "unit": "t",
+          "basis": "feed dry matter",
+          "period": "one modeled year",
+          "exchange": "gro/dry",
+          "delta": 70.0
+        },
+        {
+          "value": 54.6,
+          "unit": "t",
+          "basis": "volatile solids",
+          "period": "one modeled year",
+          "exchange": "gro/volatile",
+          "delta": 54.6
+        },
+        {
+          "value": 28210.000000000004,
+          "unit": "Nm3",
+          "basis": "dry raw gas at 0 C, 1 atm",
+          "period": "one modeled year",
+          "exchange": "gro/raw-gas",
+          "delta": 28210.000000000004
+        },
+        {
+          "value": 11284.000000000002,
+          "unit": "Nm3",
+          "basis": "separated CO2 at normal conditions",
+          "period": "one modeled year",
+          "exchange": "gro/co2",
+          "delta": 11284.000000000002
+        },
+        {
+          "value": 677.0400000000017,
+          "unit": "Nm3",
+          "basis": "unrecovered CH4",
+          "period": "one modeled year",
+          "exchange": "gro/slip",
+          "delta": 677.0400000000017
+        },
+        {
+          "value": 812.4480000000001,
+          "unit": "Nm3",
+          "basis": "internally consumed methane",
+          "period": "one modeled year",
+          "exchange": "gro/own-use",
+          "delta": 812.4480000000001
+        },
+        {
+          "value": 465.572516,
+          "unit": "t",
+          "basis": "wet digestate to agriculture",
+          "period": "one modeled year",
+          "exchange": "gro/digestate",
+          "delta": 465.572516
+        },
+        {
+          "value": 153.43892928,
+          "unit": "MWh",
+          "basis": "accepted biomethane LHV",
+          "period": "one modeled year",
+          "exchange": "gro/gas-delivery",
+          "delta": 153.43892928
+        },
+        {
+          "value": 0.0,
+          "unit": "t",
+          "basis": "wet residue to agriculture",
+          "period": "one modeled year",
+          "exchange": "yeast/direct",
+          "delta": -500.0000000000022
+        },
+        {
+          "value": 0.0,
+          "unit": "t",
+          "basis": "wet processor intake",
+          "period": "one modeled year",
+          "exchange": "yeast/feed",
+          "delta": -499.99999999999784
+        },
+        {
+          "value": 0.0,
+          "unit": "t",
+          "basis": "feed dry matter",
+          "period": "one modeled year",
+          "exchange": "yeast/dry",
+          "delta": -89.9999999999996
+        },
+        {
+          "value": 0.0,
+          "unit": "t",
+          "basis": "volatile solids",
+          "period": "one modeled year",
+          "exchange": "yeast/volatile",
+          "delta": -75.59999999999967
+        },
+        {
+          "value": 0.0,
+          "unit": "Nm3",
+          "basis": "dry raw gas at 0 C, 1 atm",
+          "period": "one modeled year",
+          "exchange": "yeast/raw-gas",
+          "delta": -42839.99999999982
+        },
+        {
+          "value": 0.0,
+          "unit": "Nm3",
+          "basis": "separated CO2 at normal conditions",
+          "period": "one modeled year",
+          "exchange": "yeast/co2",
+          "delta": -17135.999999999927
+        },
+        {
+          "value": 0.0,
+          "unit": "Nm3",
+          "basis": "unrecovered CH4",
+          "period": "one modeled year",
+          "exchange": "yeast/slip",
+          "delta": -1028.1599999999953
+        },
+        {
+          "value": 0.0,
+          "unit": "Nm3",
+          "basis": "internally consumed methane",
+          "period": "one modeled year",
+          "exchange": "yeast/own-use",
+          "delta": -1233.791999999995
+        },
+        {
+          "value": 0.0,
+          "unit": "t",
+          "basis": "wet digestate to agriculture",
+          "period": "one modeled year",
+          "exchange": "yeast/digestate",
+          "delta": -447.7180639999981
+        },
+        {
+          "value": 0.0,
+          "unit": "MWh",
+          "basis": "accepted biomethane LHV",
+          "period": "one modeled year",
+          "exchange": "yeast/gas-delivery",
+          "delta": -233.01395711999896
+        }
+      ]
+    },
+    "route_headroom": [
+      {
+        "exchange": "gro/feed",
+        "additional": {
+          "value": 0.0,
+          "unit": "t",
+          "basis": "wet feed, energy and allocated supply held fixed",
+          "period": "one modeled year"
+        }
+      },
+      {
+        "exchange": "yeast/feed",
+        "additional": {
+          "value": 0.0,
+          "unit": "t",
+          "basis": "wet feed, energy and allocated supply held fixed",
+          "period": "one modeled year"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "id": "intake",
+        "slack": {
+          "value": 0.0,
+          "unit": "wet t",
+          "basis": "remaining capacity",
+          "period": "one modeled year"
+        },
+        "active": true,
+        "facts": [
+          "intake-500"
+        ]
+      },
+      {
+        "id": "upgrading",
+        "slack": {
+          "value": 131790.0,
+          "unit": "Nm3 dry raw gas",
+          "basis": "remaining capacity",
+          "period": "one modeled year"
+        },
+        "active": false,
+        "facts": [
+          "upgrade-cap"
+        ]
+      },
+      {
+        "id": "handling",
+        "slack": {
+          "value": 1534.427484,
+          "unit": "wet t",
+          "basis": "remaining capacity",
+          "period": "one modeled year"
+        },
+        "active": false,
+        "facts": [
+          "digest-cap"
+        ]
+      },
+      {
+        "id": "gas-offtake",
+        "slack": {
+          "value": 746.56107072,
+          "unit": "MWh LHV",
+          "basis": "remaining capacity",
+          "period": "one modeled year"
+        },
+        "active": false,
+        "facts": [
+          "offtake"
+        ]
+      },
+      {
+        "id": "gas-demand",
+        "slack": {
+          "value": 746.56107072,
+          "unit": "MWh LHV",
+          "basis": "remaining capacity",
+          "period": "one modeled year"
+        },
+        "active": false,
+        "facts": [
+          "gas-demand"
+        ]
+      },
+      {
+        "id": "farm-mass",
+        "slack": {
+          "value": 1234.4274839999998,
+          "unit": "wet t",
+          "basis": "remaining capacity",
+          "period": "one modeled year"
+        },
+        "active": false,
+        "facts": [
+          "farm-cap"
+        ]
+      },
+      {
+        "id": "farm-nitrogen",
+        "slack": {
+          "value": 16.0,
+          "unit": "t N",
+          "basis": "remaining capacity",
+          "period": "one modeled year"
+        },
+        "active": false,
+        "facts": [
+          "n-cap"
+        ]
+      }
+    ]
+  },
+  "evidence_excerpt": {
+    "claim": {
+      "access": "2026-11-12",
+      "basis": "hypothetical site and activity",
+      "classification": "assumed",
+      "collection": "model",
+      "derivation": "none",
+      "effective": "pre-addition illustrative year",
+      "id": "permit",
+      "locator": "Design assumptions",
+      "publication": "2026-11-12",
+      "rights": "original text; reference by link",
+      "source": "scenario",
+      "subject": "cluster",
+      "time_basis": "as stated",
+      "uncertainty": "unknown",
+      "unit": "category",
+      "use": "model",
+      "value": "unverified"
+    },
+    "sources": [
+      {
+        "source": {
+          "id": "source-scenario",
+          "name": "Symbio illustrative annual reconstruction",
+          "publication": "2026-11-12",
+          "url": "docs/evidence-inventory.md"
+        }
+      }
+    ],
+    "dependent_rules": [
+      {
+        "id": "rule-authorization-v1"
+      }
+    ],
+    "dependent_plans": [
+      {
+        "id": "plan-023c34c6c8e8fcbfda3a531a"
+      },
+      {
+        "id": "plan-05c4ca1836b5cbd02efd9f7d"
+      }
+    ]
+  }
+}

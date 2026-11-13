@@ -1,0 +1,2 @@
+Implement docs/brief.md and docs/plan.md. Update the evidence inventory, decisions and project status as work proceeds. Keep source claims, scenario assumptions and synthetic correctness fixtures distinct. Use the real embedded Relate graph and GLOP. The core runs locally.
+The founder satisfied the UI checkpoint on 13 November 2026 with design/symbio-pages.zip. Preserve the supplied application design. Review wrappers, variant toolbars and demonstration scripts belong only in the reference export. Use real application state and service contracts.

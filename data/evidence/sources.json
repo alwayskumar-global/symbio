@@ -1,0 +1,42 @@
+{
+  "news": [
+    "Ørsted project announcement",
+    "2017-03-23",
+    "https://orsted.dk/presse/nyheder/2017/03/residues-from-novo-nordisk-and-novozymes-to-be-converted-into-biogas"
+  ],
+  "lca": [
+    "Danielsson et al., Kalundborg modeling paper",
+    "2018-06",
+    "https://www.symbiosis.dk/wp-content/uploads/2018/06/KalundborgSymbiosisPaperLCA2018-06.pdf"
+  ],
+  "history": [
+    "Kalundborg Symbiosis, Green Energy",
+    "2022-01-11",
+    "https://www.symbiosis.dk/en/2022/01/11/gron-energi/"
+  ],
+  "ministry": [
+    "Danish ministry inauguration address",
+    "2018",
+    "https://www.kefm.dk/aktuelt/nyheder/2018/jan/tale-til-indvielse-af-biogasanlaeg-kalundborg-d-18-juni-1"
+  ],
+  "operator": [
+    "Bigadan operator account",
+    "unknown",
+    "https://bigadan.com/cases/kalundborg-bioenergy"
+  ],
+  "profile": [
+    "Kalundborg Bioenergy partner profile",
+    "unknown",
+    "https://www.symbiosis.dk/en/kalundborg-bioenergi/"
+  ],
+  "scenario": [
+    "Symbio illustrative annual reconstruction",
+    "2026-11-12",
+    "docs/evidence-inventory.md"
+  ],
+  "task37": [
+    "IEA Bioenergy Task 37, Biogas upgrading technologies",
+    "2009-10",
+    "https://task37.ieabioenergy.com/technical-reports/biogas-upgrading-technologies/"
+  ]
+}

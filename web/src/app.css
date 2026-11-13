@@ -1,0 +1,317 @@
+:root {
+  --font-sans: "DM Sans Variable", system-ui, sans-serif;
+}
+body {
+  margin: 0;
+  background: var(--canvas);
+}
+.shell {
+  min-height: 100dvh;
+  border: 0;
+  border-radius: 0;
+  overflow: clip;
+}
+.workspace {
+  min-width: 0;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+}
+.sb main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  min-width: 0;
+}
+.pagehead {
+  padding-bottom: 0;
+}
+.pagehead .t-sub {
+  max-width: 760px;
+}
+.inset {
+  margin: 0 24px;
+  min-width: 0;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.scroll {
+  overflow: auto;
+}
+.sb .tbl {
+  width: 100%;
+}
+.sb dd {
+  overflow-wrap: anywhere;
+}
+.sb select,
+.sb input[type="number"] {
+  max-width: 100%;
+  padding: 7px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: white;
+  color: var(--text);
+}
+.sb button {
+  cursor: pointer;
+}
+.sb button:disabled {
+  cursor: default;
+}
+.sb .nav__i {
+  color: var(--text-2);
+}
+.sb .nav__i[aria-current] {
+  color: var(--primary);
+}
+.skip:not(:focus) {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.skip:focus {
+  position: fixed;
+  background: white;
+  z-index: 10;
+}
+.diagram-scroll {
+  overflow: auto;
+  padding: 48px 12px 8px;
+  min-height: 300px;
+}
+.diagram {
+  position: relative;
+  transform-origin: top left;
+  width: 880px;
+  height: 448px;
+}
+.diagram svg {
+  position: absolute;
+  inset: 0;
+}
+.diagram .gn {
+  justify-content: center;
+}
+.diagram .gn[aria-pressed="true"] {
+  outline: 2px solid var(--primary);
+}
+.diagram .gpkg {
+  z-index: 1;
+}
+.diagram .gpkg__tog {
+  min-height: 30px;
+}
+.drawer-modal {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  width: min(420px, 100vw);
+  max-height: 100dvh;
+  height: 100dvh;
+  max-width: 100%;
+  border: 1px solid var(--border);
+  padding: 20px;
+  color: var(--text);
+  background: white;
+  overflow: auto;
+}
+.drawer-modal::backdrop {
+  background: #17262030;
+}
+.od__ctx .btn {
+  align-self: flex-start;
+}
+.reqbody {
+  padding: 14px;
+  background: var(--surface-subtle);
+}
+.sb .tbl td {
+  vertical-align: top;
+}
+.analysis .bar__track {
+  padding-right: 90px;
+}
+.gwrap {
+  min-height: 520px;
+}
+.badge {
+  text-transform: capitalize;
+}
+.titleline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.mini {
+  font-size: 12px;
+}
+.sb .fl {
+  margin: 0;
+}
+.panel > .t-sec {
+  margin-bottom: 12px;
+}
+.badge-wrap {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.facts {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.sb .seg {
+  flex-wrap: wrap;
+}
+.wk {
+  min-height: 560px;
+}
+.od__sec h3 {
+  margin: 0;
+}
+.gfoot {
+  margin-top: auto;
+}
+.diagram-shell {
+  position: relative;
+  overflow: hidden;
+}
+.nav__i .ic {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 700px) {
+  .shell.xshell {
+    display: block;
+    padding-bottom: 60px;
+  }
+  .xshell .nav {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 9;
+    height: auto;
+    flex-direction: row;
+    padding: 0;
+    background: white;
+    border-top: 1px solid var(--border);
+  }
+  .xshell .nav__i {
+    flex: 1;
+    font-size: 11px;
+    gap: 3px;
+  }
+  .inset {
+    margin: 0 16px;
+  }
+  .sb .od {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .wk .insp {
+    min-height: 0;
+  }
+  .sb .rq__h {
+    display: none;
+  }
+  .sb .bar__val {
+    font-size: 11px;
+  }
+}
+.pathway {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 28px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.path-package {
+  padding: 12px;
+  background: var(--info-tint);
+  border: 1px dashed var(--info);
+  border-radius: 8px;
+  color: var(--info);
+  font-weight: 600;
+}
+.path-package ol {
+  margin-top: 12px;
+}
+.pathway .node {
+  padding: 8px;
+}
+.sb .node {
+  font-size: 13px;
+}
+.sb a.btn--primary,
+.sb a.btn--primary:hover {
+  color: white;
+}
+.sb a.btn {
+  text-decoration: none;
+}
+.sb .ctl4 .agree,
+.sb .od__ctx .agree {
+  grid-template-columns: 1fr;
+}
+.insp .fl,
+.od__ctx .fl {
+  --kw: 116px;
+}
+.insp__head {
+  justify-content: space-between;
+}
+.sb .reco > .tag {
+  align-self: flex-start;
+}
+.sb .inset.analysis .ctxbar {
+  font-size: 12px;
+}
+.compact-graph .gwrap {
+  min-height: 360px;
+}
+.sb .panel.ctl4 {
+  border: 1px dashed var(--border-strong);
+}
+.sb .back {
+  align-self: flex-end;
+}
+.diagram-scroll {
+  overflow-y: hidden;
+}
+.sb .reco p {
+  margin: 0;
+}
+.sb .btn:focus-visible {
+  outline-offset: 2px;
+}
+.sb .ctl .fl,
+.sb .ctl4 .fl {
+  --kw: 80px;
+}
+.ctl .fl__r,
+.ctl4 .fl__r {
+  padding: 3px 0;
+  border: 0;
+}
+.sb .btn--primary:hover {
+  background: var(--primary-hover);
+}
+.sb .rq__r {
+  overflow-wrap: anywhere;
+}

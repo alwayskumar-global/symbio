@@ -1,0 +1,95 @@
+{
+  "snapshot": "kalundborg-pre-addition",
+  "streams": [
+    {
+      "id": "yeast",
+      "facility": "Novo Nordisk",
+      "stream": "Novo Yeast Cream"
+    },
+    {
+      "id": "gro",
+      "facility": "Novozymes",
+      "stream": "NovoGro residue"
+    }
+  ],
+  "site": "site-a",
+  "capacities": [
+    "intake-500",
+    "intake-1000",
+    "intake-2000"
+  ],
+  "rules": [
+    [
+      "identity",
+      "stream-basis",
+      "present",
+      null
+    ],
+    [
+      "existing-use",
+      "baseline-agriculture",
+      "present",
+      null
+    ],
+    [
+      "solids",
+      "dm",
+      "positive",
+      null
+    ],
+    [
+      "organic-fraction",
+      "vs",
+      "positive",
+      null
+    ],
+    [
+      "methane-yield",
+      "yield",
+      "positive",
+      null
+    ],
+    [
+      "upgrading",
+      "recovery",
+      "positive",
+      null
+    ],
+    [
+      "gas-spec",
+      "gas-quality",
+      "accepted",
+      "assume-quality"
+    ],
+    [
+      "authorization",
+      "permit",
+      "verified",
+      "assume-permit"
+    ],
+    [
+      "digestate-acceptance",
+      "land",
+      "accepted",
+      "assume-land"
+    ],
+    [
+      "site",
+      "site-access",
+      "assumed available",
+      null
+    ],
+    [
+      "pathway",
+      "digestion-pathway",
+      "present",
+      null
+    ],
+    [
+      "pretreatment",
+      "pretreatment-state",
+      "accepted",
+      "assume-pretreatment"
+    ]
+  ]
+}
